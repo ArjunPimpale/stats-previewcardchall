@@ -58,10 +58,25 @@ body{
 
 .second-half{
   width:50%;
-  background-image: url(images/image-header-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: auto;
+  display:flex;
+  position:relative;
+  
    
+}
+
+.second-half::before{
+    content: "";
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+
+    background-image: url('images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: sepia(50%) hue-rotate(277deg);
 }
 /* .second-half img{
     width:100%;
@@ -93,6 +108,9 @@ body{
     margin:0;
     top:0.001rem;
 }
+
+
+
 @media only screen and (max-width:380px) {
     body{
         height:100vh;
